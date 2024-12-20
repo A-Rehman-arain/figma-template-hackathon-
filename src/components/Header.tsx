@@ -84,17 +84,27 @@ const Header = () => {
                     </Sheet>
                 </div>
 
-                {/* Right-Side Icons (visible on medium and large screens) */}
-                <div className="rightpart hidden md:flex lg:gap-10 md:gap-5">
+                
+                <div className="rightpart  hidden md:flex lg:gap-10 md:gap-5">
                     <Image src={'/assets/account.svg'} alt="account" width={23.33} height={18.67} />
                     <CiSearch className='w-[22.17px] h-[22.17px]' />
                     <CiHeart className='w-[23.33px] h-[20.81px]' />
-                    <AiOutlineShoppingCart className='w-[24.53px] h-[22.06px]' />
+                    {/* <AiOutlineShoppingCart className='w-[24.53px] h-[22.06px]' /> */}
+                    <Link href="/cart" className="text-gray-800  hover:text-gray-600">
+              <Image
+                src="/images/cart-icon.png"
+                alt="Cart Icon"
+                width={24}
+                height={24}
+                quality={100}
+                loading="lazy"
+              />
+            </Link>
                 </div>
             </div>
         </nav>
     );
 }
 
-// Exporting the Header component for use in other parts of the application
+
 export default Header;
