@@ -384,3 +384,187 @@ export default function SingleProduct() {
 }
 
 
+
+
+// "use client";
+// import Image from "next/image";
+// import { FaChevronRight } from "react-icons/fa";
+// import { useState } from "react";
+// import ProductCard from "@/components/Product-Card";
+// import Link from "next/link";
+
+// export default function SingleProduct() {
+//   const [count, setCount] = useState(1);
+
+//   const increment = () => setCount(count + 1);
+//   const decrement = () => count > 0 && setCount(count - 1);
+
+//   // Dummy data for images
+//   const relatedImages = ["/product-1.png", "/product-2.png", "/product-3.png", "/product-4.png"];
+
+//   // Related product data
+//   const relatedProducts = [
+//     {
+//       image: "/image-1.png",
+//       name: "Syltherine",
+//       description: "Stylish cafe chair",
+//       discountedPrice: "Rp 2.500.000",
+//       originalPrice: "Rp 3.500.000",
+//       discountBgColor: "bg-[#E97171]",
+//       discount: "-30%",
+//     },
+//     {
+//       image: "/images-2.png",
+//       name: "Leviosa",
+//       description: "Stylish cafe chair",
+//       discountedPrice: "Rp 2.500.000",
+//     },
+//     {
+//       image: "/images-3.png",
+//       name: "Lolito",
+//       description: "Luxury big sofa",
+//       discountedPrice: "Rp 7.000.000",
+//       originalPrice: "Rp 14.000.000",
+//       discountBgColor: "bg-[#E97171]",
+//       discount: "-50%",
+//     },
+//     {
+//       image: "/image-4.png",
+//       name: "Respira",
+//       description: "Outdoor bar table and stool",
+//       discountedPrice: "Rp 500.000",
+//       discountBgColor: "bg-[#2EC1AC]",
+//       discount: "New",
+//     },
+//   ];
+
+//   return (
+//     <div>
+//       {/* Head Section */}
+//       <div className="bg-[#F9F1E7]">
+//         <div className="h-[100px] max-w-[1400px] pl-2 gap-4 md:gap-8 flex items-center xl:pl-12 mx-auto">
+//           <div className="flex gap-4 items-center">
+//             <p className="font-poppins text-base font-normal text-[#9F9F9F]">Home</p>
+//             <FaChevronRight />
+//           </div>
+//           <div className="flex gap-4 items-center">
+//             <p className="font-poppins text-base font-normal text-[#9F9F9F]">Shop</p>
+//             <FaChevronRight />
+//           </div>
+//           <div className="border-l items-center h-[40px] w-[120px] flex justify-end border-gray-700 pt-2 lg:pt-0">
+//             <p className="text-sm md:text-base text-center lg:text-left">Asgaard sofa</p>
+//           </div>
+//         </div>
+//       </div>
+
+//       {/* Product Section */}
+//       <div className="mx-auto max-w-[1400px] gap-6 lg:gap-16 px-10 py-6 flex md:flex-row flex-col">
+//         {/* Image Section */}
+//         <div className="lg:w-[553px] w-auto h-auto flex lg:flex-row flex-col lg:gap-5">
+//           <div className="lg:w-[76px] flex lg:flex-col gap-2 lg:gap-8">
+//             {relatedImages.map((img, index) => (
+//               <span key={index} className="w-[76px] h-[80px] rounded-md flex items-center bg-[#F9F1E7]">
+//                 <Image src={img} alt={`related image ${index + 1}`} height={80} width={76} />
+//               </span>
+//             ))}
+//           </div>
+//           <div className="lg:h-[500px] lg:w-[423px] bg-[#F9F1E7] flex justify-center items-center rounded-xl">
+//             <Image
+//               src="/Asgaard-sofa.png"
+//               alt="Single Product Image"
+//               className="rounded-lg"
+//               height={391}
+//               width={481}
+//             />
+//           </div>
+//         </div>
+
+//         {/* Details Section */}
+//         <div className="h-auto flex flex-col gap-4">
+//           <h2 className="font-poppins font-normal text-[42px]/[63px]">Asgaard sofa</h2>
+//           <p className="text-[#9F9F9F] font-poppins font-medium text-2xl">Rs. 250,000.00</p>
+
+//           {/* Reviews and Description */}
+//           <div className="flex gap-5 items-center">
+//             <Image src="/rating.png" alt="rating" width={124} height={20} />
+//             <div className="border-l h-[30px] flex items-center pl-4">
+//               <p className="text-[#9F9F9F] text-sm font-poppins">5 Customer Reviews</p>
+//             </div>
+//           </div>
+//           <p className="text-sm font-poppins text-[#9F9F9F]">
+//             Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact,
+//             stout-hearted hero with a well-balanced audio which boasts a clear midrange and extended
+//             highs for a sound.
+//           </p>
+
+//           {/* Size Selection */}
+//           <div className="mt-3">
+//             <p className="font-poppins text-[#9F9F9F] text-sm">Size</p>
+//             <div className="flex gap-4">
+//               {["L", "XL", "XS"].map((size) => (
+//                 <button
+//                   key={size}
+//                   type="button"
+//                   className="w-[30px] h-[30px] flex items-center justify-center rounded-sm bg-[#F9F1E7] hover:bg-[#B88E2F] hover:text-white"
+//                   aria-label={`Select size ${size}`}
+//                 >
+//                   {size}
+//                 </button>
+//               ))}
+//             </div>
+//           </div>
+
+//           {/* Color Selection */}
+//           <div>
+//             <p className="font-poppins text-[#9F9F9F] text-sm">Color</p>
+//             <div className="flex gap-4">
+//               {["#816DFA", "black", "#B88E2F"].map((color) => (
+//                 <button
+//                   key={color}
+//                   type="button"
+//                   className={`w-[30px] h-[30px] rounded-full`}
+//                   style={{ backgroundColor: color }}
+//                   aria-label={`Select color ${color}`}
+//                 ></button>
+//               ))}
+//             </div>
+//           </div>
+
+//           {/* Quantity and Actions */}
+//           <div className="flex flex-col xl:flex-row gap-5 mt-4">
+//             <span className="h-16 w-[123px] border flex items-center justify-center">
+//               <button type="button" onClick={decrement}>-</button>
+//               <p>{count}</p>
+//               <button type="button" onClick={increment}>+</button>
+//             </span>
+//             <Link href="/cart">
+//               <button type="button" className="h-16 w-[215px] border flex items-center justify-center">
+//                 Add To Cart
+//               </button>
+//             </Link>
+//             <Link href="/product-comparison">
+//               <button type="button" className="h-16 w-[215px] border flex items-center justify-center">
+//                 + Compare
+//               </button>
+//             </Link>
+//           </div>
+//         </div>
+//       </div>
+
+//       {/* Related Products */}
+//       <div className="py-16 space-y-10">
+//         <h2 className="text-center text-4xl font-poppins">Related Products</h2>
+//         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+//           {relatedProducts.map((product, index) => (
+//             <ProductCard key={index} {...product} />
+//           ))}
+//         </div>
+//         <div className="flex justify-center">
+//           <Link href="/shop">
+//             <button type="button" className="border text-[#B88E2F]">Show More</button>
+//           </Link>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// }
