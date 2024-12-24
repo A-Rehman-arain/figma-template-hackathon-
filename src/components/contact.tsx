@@ -1,4 +1,9 @@
 import Image from "next/image";
+import address from "../../public/address.png"
+import phone from "../../public/phone.png"
+import time from "../../public/clock.png"
+
+
 
 const features = [
   {
@@ -39,6 +44,7 @@ export default function ContactPage() {
           </p>
         </div>
 
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
           {/* Contact Information */}
           <div className="space-y-10">
@@ -46,7 +52,7 @@ export default function ContactPage() {
             <div className="flex items-start gap-5">
               <div className="w-14 h-14 flex-shrink-0">
                 <Image
-                  src="/images/address.png"
+                  src={address}
                   alt="Address icon"
                   width={40}
                   height={40}
@@ -66,7 +72,7 @@ export default function ContactPage() {
             <div className="flex items-start gap-5">
               <div className="w-14 h-14 flex-shrink-0">
                 <Image
-                  src="/images/phone.png"
+                  src={phone}
                   alt="Phone icon"
                   width={40}
                   height={40}
@@ -85,7 +91,7 @@ export default function ContactPage() {
             <div className="flex items-start gap-5">
               <div className="w-14 h-14 flex-shrink-0">
                 <Image
-                  src="/images/time.png"
+                  src={time}
                   alt="Time icon"
                   width={40}
                   height={40}

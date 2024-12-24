@@ -10,6 +10,10 @@ import {
     CarouselPrevious,
 } from "@/components/ui/carousel"
 
+import inspirationonline from "../../public/inspirationline.svg";
+import inspirationimage from "../../public/room-1.png";
+import rightArrow  from "../../public/right-arrow.png" 
+
 // Setting up the Poppins font with different font weights and subsets
 const poppins = Poppins({
     subsets: ['latin'],
@@ -40,13 +44,13 @@ const Inspiration = () => {
             {/* Middle Section: Image */}
             <div className='relative w-full md:w-[404px] md:h-[582px]'>
                 {/* Inspiration image */}
-                <Image src={'/assets/inspirationimage.png'} alt='first inspiration image' width={404} height={582} layout="responsive" />
+                <Image src={inspirationimage} alt='first inspiration image' width={404} height={582} layout="responsive" />
                 {/* Overlay with text */}
                 <div className='w-[217px] h-[130px] px-5 flex flex-col items-start justify-center absolute bottom-7 left-5 bg-white/75'>
                     {/* Room number and category */}
                     <div className='flex items-center gap-2'>
                         <span className='font-medium text-[16px]'>01</span>
-                        <Image src={'/assets/inspirationline.svg'} alt="line" width={27} height={1} />
+                        <Image src={inspirationonline} alt="line" width={27} height={1} />
                         <span className='font-medium text-[16px]'>Bed Room</span>
                     </div>
                     {/* Room name */}
@@ -54,7 +58,7 @@ const Inspiration = () => {
                 </div>
                 {/* Right arrow button */}
                 <div className='w-[48px] h-[48px] bg-primaryColor flex items-center justify-center absolute bottom-7 left-[238px]'>
-                    <Image src={'/assets/rightArrow.svg'} alt='right arrow' width={18} height={12} />
+                    <Image src={rightArrow} alt='right arrow' width={18} height={12} />
                 </div>
             </div>
 

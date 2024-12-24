@@ -5,6 +5,11 @@ const poppins = Poppins({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
+
+import  bannerimage from "@/../public/banner-image.png"
+
+
+
 // HeroSection functional component
 const HeroSection = () => {
   return (
@@ -12,7 +17,7 @@ const HeroSection = () => {
     <div className="h-[500px] md:h-[716px] w-full relative">
       {/* Background Image with responsive opacity for mobile, tablet, and desktop */}
       <Image
-        src={"/assets/homebackground.png"} // Image path
+        src={bannerimage} // Image path
         alt="home background" // Alternative text for accessibility
         fill // Makes the image cover the entire parent container
         className="object-cover opacity-70 md:opacity-70 lg:opacity-100" // Opacity changes based on screen size

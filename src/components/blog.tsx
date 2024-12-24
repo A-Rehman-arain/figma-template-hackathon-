@@ -1,6 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ChevronRight, Search } from "lucide-react";
+import comparisonbg from "../../public/shop.png";
+import logoshort from "../../public/logo.png";
+import laptop from "../../public/post-1.png";
+import admin from "../../public/admin.png";
+import date from "../../public/calender.png";
+import tag from "../../public/tag.png";
 
 export default function BlogPage() {
   const categories = [
@@ -74,7 +80,7 @@ export default function BlogPage() {
       {/* Page Header */}
       <div className="relative h-[300px] w-full">
         <Image
-          src="/images/comparison-bg.png"
+          src={comparisonbg}
           alt="Comparison background"
           fill
           className="object-cover"
@@ -82,7 +88,7 @@ export default function BlogPage() {
         />
         <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/30">
           <Image
-            src="/images/logo-short.png"
+            src={logoshort}
             alt="Logo"
             width={70}
             height={70}
@@ -108,17 +114,18 @@ export default function BlogPage() {
             <div className="space-y-8">
               <div className="relative aspect-[16/9] w-full">
                 <Image
-                  src="/images/laptop-blog.png"
+                  src={laptop}
                   alt="Featured blog post"
                   fill
                   className="object-cover rounded-lg"
                   priority
                 />
               </div>
+
               <div className="flex items-center gap-6 text-gray-500 text-sm">
                 <div className="flex items-center gap-2">
                   <Image
-                    src="/images/admin-icon.png"
+                    src={admin}
                     alt="Admin"
                     width={16}
                     height={16}
@@ -127,7 +134,7 @@ export default function BlogPage() {
                 </div>
                 <div className="flex items-center gap-2">
                   <Image
-                    src="/images/date-icon.png"
+                    src={date}
                     alt="Date"
                     width={16}
                     height={16}
@@ -136,7 +143,7 @@ export default function BlogPage() {
                 </div>
                 <div className="flex items-center gap-2">
                   <Image
-                    src="/images/tag-icon.png"
+                    src={tag}
                     alt="Tag"
                     width={16}
                     height={16}
@@ -262,3 +269,6 @@ export default function BlogPage() {
     </>
   );
 }
+
+
+

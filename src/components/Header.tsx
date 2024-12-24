@@ -73,7 +73,7 @@ const Header = () => {
 
                                     {/* Mobile Icons (Account, Search, Heart, Cart) */}
                                     <div className="rightpart flex gap-10 md:hidden">
-                                        <Image src={'/assets/account.svg'} alt="account" width={23.33} height={18.67} />
+                                        <Image src={'/asset/account.svg'} alt="account" width={23.33} height={18.67} />
                                         <CiSearch className='w-[22.17px] h-[22.17px]' />
                                         <CiHeart className='w-[23.33px] h-[20.81px]' />
                                         <AiOutlineShoppingCart className='w-[24.53px] h-[22.06px]' />

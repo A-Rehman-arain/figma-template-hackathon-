@@ -5,6 +5,7 @@ import Range from "@/components/Range";
 import ShareSection from "@/components/ShareSection";
 
 
+
 export default function Home() {
   return (
     <div>
@@ -13,8 +14,6 @@ export default function Home() {
       <Products />
       <Inspiration />
       <ShareSection />
-      
-
       <hr />
     </div>
   );
