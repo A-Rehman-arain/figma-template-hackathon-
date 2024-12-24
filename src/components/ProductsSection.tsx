@@ -32,7 +32,7 @@ const products: Product[] = [
   {
     id: "1",
     name: "Syltherine",
-    image:"/images/Syltherine.png",
+    image:"/images/syltherine.png",
     category: "Stylish cafe chair",
     price: 2500000,
     originalPrice: 3500000,
@@ -41,7 +41,7 @@ const products: Product[] = [
   {
     id: "2",
     name: "Leviosa",
-    image: "/images/Leviosa.png",
+    image: "/images/leviosa.png",
     category: "Ergonomic office chair",
     price: 4500000,
   },
