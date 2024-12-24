@@ -2,6 +2,9 @@
 import { Poppins } from 'next/font/google';
 import RangeProduct from './RangeProduct';  // Importing the RangeProduct component which is used to display individual product categories
 import HeadingCenter from './HeadingCenter';
+import Dining from "../../public/dining.png"
+import Living from "../../public/living.png"
+import Bedroom from "../../public/bedroom.png" 
 
 // Setting up the Poppins font with different font weights and subsets
 // This allows the usage of various font weights like '100', '200', '300', etc. throughout the app.
@@ -13,9 +16,9 @@ const poppins = Poppins({
 // Data for the range categories to make the code DRY (Don't Repeat Yourself)
 // Each item in the array represents a category with its image URL and title.
 const rangeCategories = [
-    { url: '/assets/dining.png', title: 'Dining' },  // Category for Dining
-    { url: '/assets/living.png', title: 'Living' },  // Category for Living
-    { url: '/assets/bedroom.png', title: 'Bedroom' },  // Category for Bedroom
+    { url: {Dining}, title: 'Dining' },  // Category for Dining
+    { url: {Living}, title: 'Living' },  // Category for Living
+    { url:{Bedroom}, title: 'Bedroom' },  // Category for Bedroom
 ];
 
 const Range = () => {

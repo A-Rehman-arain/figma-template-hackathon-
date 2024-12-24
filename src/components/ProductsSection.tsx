@@ -9,6 +9,10 @@ import {
   ChevronRight,
 } from "lucide-react";
 
+
+
+
+
 //  structure of a product
 interface Product {
   id: string;
@@ -23,12 +27,12 @@ interface Product {
   };
 }
 
-//  list of products
+
 const products: Product[] = [
   {
     id: "1",
     name: "Syltherine",
-    image: "/images/syltherine.png",
+    image:"/images/Syltherine.png",
     category: "Stylish cafe chair",
     price: 2500000,
     originalPrice: 3500000,
@@ -37,7 +41,7 @@ const products: Product[] = [
   {
     id: "2",
     name: "Leviosa",
-    image: "/images/leviosa.png",
+    image: "/images/Leviosa.png",
     category: "Ergonomic office chair",
     price: 4500000,
   },
@@ -245,7 +249,5 @@ export default function Products() {
     </section>
   );
 }
-
-
 
 

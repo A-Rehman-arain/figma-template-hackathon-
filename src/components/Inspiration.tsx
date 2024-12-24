@@ -12,7 +12,12 @@ import {
 
 import inspirationonline from "../../public/inspirationline.svg";
 import inspirationimage from "../../public/room-1.png";
-import rightArrow  from "../../public/right-arrow.png" 
+import rightArrow  from "../../public/right-arrow.png";
+
+import Image1 from "../../public/room-1.png"
+import Image2 from "../../public/room-2.png"
+
+
 
 // Setting up the Poppins font with different font weights and subsets
 const poppins = Poppins({
@@ -69,11 +74,11 @@ const Inspiration = () => {
                     <CarouselContent className="md:h-full">
                         {/* First image in the carousel */}
                         <CarouselItem className="flex items-center justify-center h-full">
-                            <Image src={'/assets/crouselimage1.png'} alt='image 1' width={372} height={486} className="object-contain" />
+                            <Image src={Image2} alt='image 1' width={372} height={486} className="object-contain" />
                         </CarouselItem>
                         {/* Second image in the carousel */}
                         <CarouselItem className="flex items-center justify-center h-full">
-                            <Image src={'/assets/crouselimage2.png'} alt='image 2' width={372} height={486} className="object-contain" />
+                            <Image src={Image1} alt='image 2' width={372} height={486} className="object-contain" />
                         </CarouselItem>
                     </CarouselContent>
 

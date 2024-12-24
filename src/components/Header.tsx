@@ -4,6 +4,8 @@ import { Poppins } from 'next/font/google';
 // Importing necessary Next.js components for navigation and image rendering
 import Link from "next/link";
 import Image from "next/image";
+import logo from "../../public/logo1.png";
+import cart from "../../public/shopping-cart.png"
 
 // Importing icons from the 'react-icons' library for the menu, search, heart, and cart icons
 import { CiHeart, CiMenuBurger, CiSearch } from "react-icons/ci";
@@ -34,7 +36,7 @@ const Header = () => {
             <div className="flex justify-between items-end h-[41px]">
                 {/* Logo Section */}
                 <div>
-                    <Image src={'/assets/logo.png'} alt="logo" width={185} height={41} />
+                    <Image src={logo} alt="logo" width={185} height={41} />
                 </div>
 
                 {/* Middle Navigation Links (visible on large screens) */}
@@ -92,7 +94,7 @@ const Header = () => {
                     {/* <AiOutlineShoppingCart className='w-[24.53px] h-[22.06px]' /> */}
                     <Link href="/cart" className="text-gray-800  hover:text-gray-600">
               <Image
-                src="/images/cart-icon.png"
+                src={cart}
                 alt="Cart Icon"
                 width={24}
                 height={24}
